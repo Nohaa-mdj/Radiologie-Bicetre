@@ -1,0 +1,258 @@
+/* Styles généraux */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #10162f;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+.container h2 {
+  font-size: 1.8em;
+}
+
+.container p {
+  font-size: 1.2em;
+}
+
+/* Header */
+.header {
+  background-color: #0a0f26;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo img {
+  width: 200px;
+  position: absolute;
+  left: 50px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+/* Hero */
+.hero {
+  background: url("radiographie.jpg") no-repeat center center/cover;
+  width: 100vw;
+  text-align: center;
+  padding: 60px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 36px;
+  font-weight: bold;
+  padding-bottom: 60px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(29, 35, 61, 0.3); /* Couleur foncée semi-transparente */
+  z-index: 1;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  z-index: 2;
+}
+
+.card {
+  /*background-color: #6eaada;*/
+  background-color: rgba(120, 157, 184, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  width: 70%;
+  z-index: -1;
+}
+
+.card ul {
+  font-size: 1.1em;
+}
+
+/* Présentation */
+.presentation {
+  padding: 50px 0;
+}
+
+.presentation h2 {
+  border-left: 5px solid #1769aa;
+  padding-left: 15px;
+  font-size: 3em;
+}
+
+/* Équipe Médicale */
+.equipe-medicale {
+  padding: 50px 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Trois colonnes */
+  gap: 30px; /* Espacement entre les blocs */
+  text-align: left;
+  padding-bottom: 30px;
+}
+
+.team h3 {
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.team p {
+  font-size: 2.2em;
+  margin: 5px 0;
+}
+
+.team li {
+  font-size: 1.2em;
+}
+
+.column h4 {
+  font-size: 1.3em;
+}
+
+/* Services */
+.services {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Trois colonnes */
+  gap: 55px;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-card {
+  background: linear-gradient(to right, #6cb4f5, #4c78b0); /* Dégradé bleu */
+  border-radius: 15px;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Ajoute un espace entre l'icône et le texte */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  flex-grow: 1; /* Permet au texte de s'adapter */
+}
+
+.service-card p {
+  font-size: 1em;
+  color: white;
+  margin-top: 10px;
+}
+
+.service-card a {
+  color: white;
+  text-decoration: underline;
+}
+
+.service-card::before {
+  content: "➜"; /* Flèche Unicode */
+  font-size: 1.8em;
+  font-weight: bold;
+  color: white;
+  margin-right: 10px;
+}
+
+/* Effet de survol */
+.service-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .service-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .service-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Formulaire */
+.rendez-vous form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+  margin: auto;
+}
+
+.rendez-vous input,
+.rendez-vous textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.rendez-vous button {
+  background-color: #1769aa;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: #0a0f26;
+  text-align: center;
+  padding: 20px;
+}
